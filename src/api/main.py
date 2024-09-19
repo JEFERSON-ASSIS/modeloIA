@@ -4,7 +4,9 @@ import requests
 from io import BytesIO
 from PIL import Image
 from werkzeug.datastructures import FileStorage
-from integration.receive_image import receive_image3  # Importa a função como está
+# from integration.receive_image import receive_image3  # Importa a função como está
+from .integration.receive_image import receive_image3
+
 
 app = Flask(__name__)
 
