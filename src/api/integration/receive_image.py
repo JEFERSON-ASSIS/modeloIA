@@ -2,7 +2,8 @@
 
 from .onlyGeminis import onlyGeminis
 
-from integration.validate_image import validate_image 
+# from integration.validate_image import validate_image 
+from .validate_image import validate_image 
 
 
     

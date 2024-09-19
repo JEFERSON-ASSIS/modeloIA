@@ -4,7 +4,9 @@ import vertexai.preview.generative_models as generative_models
 import os
 
 # Set the path to your service account JSON key file
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "C:\\Users\\Jeferson Silva\\Desktop\\modelo\\modelo_ia\\src\\api\\integration\\pivotal-essence-410920-c3a96195c1ac.json"
+# os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "C:\\Users\\Jeferson Silva\\Desktop\\modelo\\modelo_ia\\src\\api\\integration\\pivotal-essence-410920-c3a96195c1ac.json"
+
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = os.path.join(os.path.dirname(__file__), 'integration', 'pivotal-essence-410920-c3a96195c1ac.json')
 
 # Initialize Vertex AI with the project ID and location
 google_project_id = os.getenv("PROJECT_ID")
