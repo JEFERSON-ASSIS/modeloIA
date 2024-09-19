@@ -1,5 +1,10 @@
-from integration.onlyGeminis import onlyGeminis
+# from integration.onlyGeminis import onlyGeminis
+
+from .onlyGeminis import onlyGeminis
+
 from integration.validate_image import validate_image 
+
+
     
 def receive_image3(request):
     file = request.files['image']
