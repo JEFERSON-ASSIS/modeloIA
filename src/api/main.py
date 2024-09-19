@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request, jsonify
 import requests
 from io import BytesIO
@@ -44,8 +45,12 @@ def process_image():
         print(f"Erro ao processar a imagem: {e}")
         return jsonify({"error": "Erro ao processar a imagem"}), 500
 
+
 if __name__ == '__main__':
-    app.run()
+    # Ajusta para pegar a porta de uma variável de ambiente, o que é necessário em ambientes como o Render
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
+
 
 
 
